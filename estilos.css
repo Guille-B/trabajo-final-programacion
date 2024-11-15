@@ -1,0 +1,19 @@
+@import url(nosotros/nosotros.css);
+@import url(footer/footer.css);
+@import url(home/home.css);
+@import url(nav/nav.css);
+@import url(catalogo/catalogo.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.oculto{
+    display: none;
+}
+h5{
+    color: white;
+}
+
