@@ -1,5 +1,5 @@
 .carrusel {
-  width: 80%;
+  width: 100%;
   margin: auto;
   overflow: hidden;
   position: relative;
@@ -31,7 +31,6 @@
   padding: 10px;
   font-size: 18px;
 }
-
 
 .card {
   background: white;
@@ -117,8 +116,14 @@
 .fondo h1 {
   display: flex;
   justify-content: center;
-
-
 }
-  
+
+.fondo .card {
+  transition: transform 0.3s ease; /* Suaviza la transformación */
+}
+
+.fondo .card:hover {
+  transform: scale(1.05); /* Aumenta el tamaño al 105% */
+}
+
 
