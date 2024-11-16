@@ -1,5 +1,6 @@
 import { datos } from "./datos.js";
 
+
 // Obtener el modal
 var popup = document.getElementById("loginPopup");
 
@@ -16,7 +17,7 @@ btn.onclick = function () {
 
 // Cuando el usuario hace clic en <span> (x), se cierra el modal
 span.onclick = function () {
-    popup.style.display = "none";
+    popup.classList.remove("oculto");
 }
 
 // Cuando el usuario hace clic en cualquier parte fuera del modal, se cierra
@@ -45,6 +46,7 @@ function iniciarSesion() {
                 mensaje = nombre_usuario + " ha iniciado sesión";
                 localStorage.setItem("usuario", nombre_usuario);
                 localStorage.setItem("numero",usuario.nroUser);
+                
                 return;
             }
         }
