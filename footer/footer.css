@@ -55,7 +55,7 @@ body {
 
 
 button {
-    background-color: #ff6347; 
+    background-color: #7700ff;
     color: white;
     border: none;
     padding: 10px 15px;
@@ -67,9 +67,15 @@ button {
 }
 
 button:hover {
-    background-color: #e5533d; 
+    background-color: #b23fe0; 
 }
-
+#save-footer {
+    background-color: #28a745;
+  }
+  
+  #save-footer:hover {
+    background-color: #218838;
+  }
 
 .social-media {
     margin-top: 10px;

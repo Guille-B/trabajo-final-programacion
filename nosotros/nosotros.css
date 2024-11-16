@@ -12,7 +12,21 @@
     max-width: 100%;  
 
 }
-
+.saveButton {
+    background-color: #28a745;
+  }
+  
+  .saveButton:hover {
+    background-color: #218838;
+  }
+  .cancelButton{
+    background-color: #ff0000;
+  }
+  .cancelButton:hover{
+    background-color: #fa6767;
+  
+  }
+  
 #descripcion{  
     text-align: justify;
     padding: 5px;

@@ -49,6 +49,16 @@ function init() {
 
         formEdicion.classList.add("oculto");
     }
+
+    document.querySelectorAll('.cancelar').forEach(button => {
+        button.addEventListener('click', function() {
+            const card = this.closest('.card');
+            const formEdicion = card.querySelector('.form-edicion');
+            formEdicion.classList.add("oculto");
+    
+        });
+    });
+
 }
 
 // Llamar a la función init para inicializar el comportamiento

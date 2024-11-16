@@ -60,14 +60,18 @@
   margin: 10px 0;
 }
 
-.card-button {
+.card .editar{
   display: inline-block;
   padding: 10px 15px;
-  background-color: #007BFF;
+  background-color: #7700ff;
   color: white;
   text-decoration: none;
   border-radius: 5px;
   margin-top: 10px;
+}
+.card .editar:hover{
+  background-color: #b23fe0; 
+  
 }
 
 
@@ -86,13 +90,21 @@
   border-radius: 5px;
 }
 
-.save-button {
+.save button {
   background-color: #28a745;
 }
 
 .save-button:hover {
   background-color: #218838;
 }
+.cancelar{
+  background-color: #ff0000;
+}
+.cancelar:hover{
+  background-color: #fa6767;
+
+}
+
 
 .oculto {
   display: none;
