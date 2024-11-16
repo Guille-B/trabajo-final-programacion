@@ -61,7 +61,7 @@
 }
 
 .card .editar{
-  display: inline-block;
+
   padding: 10px 15px;
   background-color: #7700ff;
   color: white;
@@ -137,5 +137,6 @@
 .fondo .card:hover {
   transform: scale(1.05); /* Aumenta el tamaño al 105% */
 }
+
 
 

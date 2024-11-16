@@ -47,6 +47,7 @@ if (btnIniciarSesion) {
 }
 
 function iniciarSesion() {
+    const editar = card.querySelectorAll('.editar');
     const nombre_usuario = document.getElementById("username").value;
     const contra = document.getElementById("password").value;
     let mensaje = "Usuario y/o contraseña incorrectos";
@@ -57,9 +58,11 @@ function iniciarSesion() {
             usuarioEncontrado = true;
             if (contra === usuario.contraseña) {
                 mensaje = `${nombre_usuario} ha iniciado sesión`;
+                
                 localStorage.setItem("usuario", nombre_usuario);
                 localStorage.setItem("numero", usuario.nroUser );
                 popup.style.display = "none"; 
+                editar.classList.remove("oculto");
                 return;
             }
         }
