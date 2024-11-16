@@ -1,40 +1,53 @@
 import { datos } from "./datos.js";
 
 // Obtener el modal
-var popup = document.getElementById("loginPopup");
+const popup = document.getElementById("loginPopup");
+if (!popup) {
+    console.error("El modal no se encontró.");
+}
 
 // Obtener el botón que abre el modal
-var btn = document.getElementById("btnL");
+const btn = document.getElementById("btnL");
+if (!btn) {
+    console.error("El botón para abrir el modal no se encontró.");
+}
 
 // Obtener el elemento <span> que cierra el modal
-var span = document.getElementsByClassName("close")[0];
-
-// Cuando el usuario hace clic en el botón, se abre el modal
-btn.onclick = function () {
-    popup.style.display = "block";
+const span = document.getElementsByClassName("close")[0];
+if (!span) {
+    console.error("El elemento para cerrar el modal no se encontró.");
 }
 
-// Cuando el usuario hace clic en <span> (x), se cierra el modal
-span.onclick = function () {
-    popup.style.display = "none";
+// Asignar eventos solo si los elementos existen
+if (btn) {
+    btn.onclick = function () {
+        popup.style.display = "block";
+    }
 }
 
-// Cuando el usuario hace clic en cualquier parte fuera del modal, se cierra
-window.onclick = function (event) {
-    if (event.target == popup) {
+if (span) {
+    span.onclick = function () {
         popup.style.display = "none";
     }
 }
 
+// Cuando el usuario hace clic en cualquier parte fuera del modal, se cierra
+window.onclick = function (event) {
+    if (event.target === popup) {
+        popup.style.display = "none";
+    }
+}
 
-
-
-const btnIniciarSesion = document.getElementById("enviar")
-btnIniciarSesion.addEventListener("click", iniciarSesion);
+const btnIniciarSesion = document.getElementById("enviar");
+if (btnIniciarSesion) {
+    btnIniciarSesion.addEventListener("click", iniciarSesion);
+} else {
+    console.error("El botón de iniciar sesión no se encontró.");
+}
 
 function iniciarSesion() {
-    let nombre_usuario = document.getElementById("username").value;
-    let contra = document.getElementById("password").value;
+    const nombre_usuario = document.getElementById("username").value;
+    const contra = document.getElementById("password").value;
     let mensaje = "Usuario y/o contraseña incorrectos";
     let usuarioEncontrado = false;
 
@@ -42,9 +55,10 @@ function iniciarSesion() {
         if (nombre_usuario === usuario.usuario) {
             usuarioEncontrado = true;
             if (contra === usuario.contraseña) {
-                mensaje = nombre_usuario + " ha iniciado sesión";
+                mensaje = `${nombre_usuario} ha iniciado sesión`;
                 localStorage.setItem("usuario", nombre_usuario);
-                localStorage.setItem("numero",usuario.nroUser);
+                localStorage.setItem("numero", usuario.nroUser );
+                popup.style.display = "none"; 
                 return;
             }
         }
@@ -57,10 +71,7 @@ function iniciarSesion() {
     }
 
     // Limpiar campos
-    document.getElementById("nombre_usuario").value = "";
-    document.getElementById("contra").value = "";
-    console.log("Usuario ingresado:", nombre_usuario);
-    console.log("Contraseña ingresada:", contra);
-    console.log("Usuarios disponibles:", datos.usuarios)
-}
+    document.getElementById("username").value = "";
+    document.getElementById("password").value = "";
 
+}
