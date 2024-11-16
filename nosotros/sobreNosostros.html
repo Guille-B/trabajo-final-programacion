@@ -16,9 +16,21 @@
         </div>
         <br><br>
         <div class="row">
-            <div class="col-12 col-md-7">
-                <h1 class="edit" id="tituloDesc">Somos</h1>
-                <p id="descripcion">Lorem ipsum dolor sit amet consectetur adipiscing elit lacus taciti quam risus velit fusce, enim ac id lacinia odio cursus nibh pellentesque potenti accumsan viverra luctus. Interdum lacinia sapien sociosqu nibh magnis litora aliquet mollis, lectus quam mus facilisis urna habitant id, sagittis lacus natoque dignissim consequat commodo mattis. Torquent quam tristique metus nulla molestie purus fames iaculis, taciti ante lectus fusce mus at dapibus, dignissim conubia id mi condimentum commodo dictumst. Est viverra nibh rutrum curae elementum, natoque leo proin arcu tempor, neque scelerisque condimentum suscipit.</p>
+            <div class="editable col-12 col-md-7 ">
+                <h1 class="card-title" id="tituloDesc">Somos</h1>
+                <p class="card-description" id="descripcion">Lorem ipsum dolor sit amet consectetur adipiscing elit lacus taciti quam risus velit fusce, enim ac id lacinia odio cursus nibh pellentesque potenti accumsan viverra luctus. Interdum lacinia sapien sociosqu nibh magnis litora aliquet mollis, lectus quam mus facilisis urna habitant id, sagittis lacus natoque dignissim consequat commodo mattis. Torquent quam tristique metus nulla molestie purus fames iaculis, taciti ante lectus fusce mus at dapibus, dignissim conubia id mi condimentum commodo dictumst. Est viverra nibh rutrum curae elementum, natoque leo proin arcu tempor, neque scelerisque condimentum suscipit.</p>
+                <button class="btn btn-primary editar">editar</button>
+                <div id="editForm" style="display:none;">
+                    <h2>Editar Contenido</h2>
+                    <label class="tituloInput">Título:</label>
+                    <input type="text" id="tituloInput" required>
+                    <br>
+                    <label class="descripcionInput">Descripción:</label>
+                    <textarea id="descripcionInput" required></textarea>
+                    <br>
+                    <button id="saveButton">Guardar</button>
+                    <button id="cancelButton">Cancelar</button>
+                </div>
             </div>
             <br><br>
             <div class="col-12 col-md-5">
@@ -27,41 +39,76 @@
         </div>
         <br><br>
         <div class="row">
-
             <div class="col-12">
                 <div class="row">
                     <div class="col-md-4">
-                        <div class="card text-center" id="carta">
-                            <div class="card-body">
+                        <div class="card text-center " id="carta">
+                            <div class="editable">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-file-earmark-person" viewBox="0 0 16 16">
                                     <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
                                     <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5z"/>
                                 </svg>
-                                <h3>Atención personalizada</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit vulputate, scelerisque praesent conubia mus bibendum felis class justo, penatibus egestas auctor nam vehicula suspendisse pulvinar. </p>
+                                <h3 class="card-title editable" id="tituloDesc">Atención personalizada</h3>
+                                <p class="card-description editable" id="descripcion">Lorem ipsum dolor sit amet consectetur adipiscing elit vulputate, scelerisque praesent conubia mus bibendum felis class justo, penatibus egestas auctor nam vehicula suspendisse pulvinar. </p>
+                                <button class="editar">editar</button>
+                                <div id="editForm" style="display:none;">
+                                    <h2>Editar Contenido</h2>
+                                    <label class="tituloInput">Título:</label>
+                                    <input type="text" id="tituloInput" required>
+                                    <br>
+                                    <label class="descripcionInput">Descripción:</label>
+                                    <textarea id="descripcionInput" required></textarea>
+                                    <br>
+                                    <button id="saveButton">Guardar</button>
+                                    <button id="cancelButton">Cancelar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card text-center" id="carta2">
-                            <div class="card-body">
+                            <div class="editable ">
                                 <svg version="1.1" id="bike-17" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="50" heigth="50"
                                 viewBox="0 0 1010 604.2442" enable-background="new 0 0 1010 604.2442" xml:space="preserve">
                            <path id="bike-17-bike-17" fill="#3E5266" d="M41.0508,444.6065c0,88.0205,71.6572,159.6377,159.6474,159.6377 	c88.0889,0,159.7359-71.6172,159.7359-159.6377c0-88.1084-71.647-159.7647-159.7359-159.7647 	C112.708,284.8418,41.0508,356.4981,41.0508,444.6065z M111.7808,444.6065c0-49.1387,39.9067-89.0645,88.9174-89.0645 	c49.129,0,89.0357,39.9258,89.0357,89.0645c0,48.9814-39.9067,88.8984-89.0357,88.8984 	C151.6875,533.5049,111.7808,493.5879,111.7808,444.6065z M0,174.5703l3.0576,13.0391c0.2271,0.8281,20.21,79.9717,129.3472,79.6758 	c0,0,61.478,0,62.395,0c19.7861-0.6021,42.8164,3.748,43.0635,3.7676c18.4145,3.7973,60.0771,13.1772,95.0918,52.7588 	c22.6162,25.5947,42.4316,62.0302,45.8838,116.081l1.0058,10.0303l96.8872,1.3222c0,0,68.3521,3.4122,116.4947-53.8828 	c25.5468-30.5371,51.6347-65.6113,69.2607-90.0918l73.5205-90.3281c12.2803,29.4522,24.8945,59.5645,36.7803,88.0401 	c-48.961,27.3212-82.1709,79.6259-82.1709,139.624c0,88.0205,71.6367,159.6377,159.6963,159.6377 	c88.0107,0,159.6865-71.6172,159.6865-159.6377c0-88.1084-71.6758-159.7647-159.6865-159.7647 	c-15.6133,0-30.6748,2.3272-44.9072,6.4898l-37.629-89.9829h56.2403V76.9336h-10.5928h-97.6465l-27.6172-66.0351 	C685.4092,4.3101,678.9492,0,671.8281,0H498.5498v35.3892c0,0,141.084,0,161.5303,0c1.5683,3.8169,8.4336,20.1313,18.5234,44.3257 	H506.5684h-5.0401c0,0-72.2685,87.7241-78.1074,94.8554C413.6465,174.5703,0,174.5703,0,174.5703z M800.3555,370.919 	C820.2109,418.3506,834,451.3535,834,451.3535c3.7676,9.0245,14.124,13.2959,23.1191,9.5381 	c8.9952-3.7578,13.2764-14.1836,9.5079-23.1797l-33.6426-80.415c5.5722-1.1631,11.4111-1.7549,17.3291-1.7549 	c49.04,0,88.9668,39.9258,88.9668,89.0645c0,48.9814-39.9268,88.8984-88.9668,88.8984c-49.0791,0-89.0059-39.917-89.0059-88.8984 	C761.3076,413.9815,776.793,386.9854,800.3555,370.919z M721.124,181.356H445.3369c20.7227-25.1909,61.8526-75.1187,66.2119-80.3955 	c9.2129,0,167.3809,0,175.9317,0C697.1963,124.1587,708.7168,151.8745,721.124,181.356z M708.9043,216.5777H439.9717v-21.0581 	h286.1045C721.6074,200.9937,715.7783,208.1543,708.9043,216.5777z M480.1641,374.2032h77.1709v14.1435h-77.1709V374.2032z 	 M480.1641,342.877h77.1709v14.124h-77.1709V342.877z M439.9717,274.0708v-43.3095h257.4414 	c-10.6719,13.1479-22.7549,27.9526-35.251,43.3095H439.9717z M395.2412,365.1289c0-13.2763,10.8301-24.0664,24.1455-24.0664 	c13.2959,0,24.106,10.7901,24.106,24.0664c0,13.3741-10.8101,24.1455-24.106,24.1455 C406.0713,389.2744,395.2412,378.503,395.2412,365.1289z M29.1758,195.7564c8.4824,0,46.1006,0,95.1806,0v50.1743 C63.8252,243.6133,38.812,213.6485,29.1758,195.7564z"/>
                            </svg>
                            
-                                <h3>Calidad garantizada</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit vulputate, scelerisque praesent conubia mus bibendum felis class justo, penatibus egestas auctor nam vehicula suspendisse pulvinar.</p>
+                                <h3 class="card-title editable " id="tituloDesc" >Calidad garantizada</h3>
+                                <p class="card-description editable" id="descripcion">Lorem ipsum dolor sit amet consectetur adipiscing elit vulputate, scelerisque praesent conubia mus bibendum felis class justo, penatibus egestas auctor nam vehicula suspendisse pulvinar.</p>
+                                <button class=" editar">editar</button>
+                                <div id="editForm" style="display:none;">
+                                    <h2>Editar Contenido</h2>
+                                    <label class="tituloInput">Título:</label>
+                                    <input type="text" id="tituloInput" required>
+                                    <br>
+                                    <label class="descripcionInput">Descripción:</label>
+                                    <textarea id="descripcionInput" required></textarea>
+                                    <br>
+                                    <button id="saveButton">Guardar</button>
+                                    <button id="cancelButton">Cancelar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-4">
                         <div class="card text-center">
-                            <div class="card-body">
+                            <div class="editable">
                                 <svg id="_x30_1" style="enable-background:new 0 0 512 512;" version="1.1" width="50" height="50" viewBox="0 0 512 512" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><path d="M312.016,222.911c-7.139-7.139-18.714-7.139-25.854,0l-47.398,47.398l-12.927-12.927c-7.139-7.139-18.714-7.139-25.854,0   l0,0c-7.139,7.139-7.139,18.714,0,25.854l25.854,25.854c7.139,7.139,18.714,7.139,25.854,0l60.325-60.325   C319.155,241.625,319.155,230.05,312.016,222.911L312.016,222.911z"/><path d="M256,0C114.615,0,0,114.615,0,256s114.615,256,256,256s256-114.615,256-256S397.385,0,256,0z M390.062,299.737   c0,23.235-11.042,45.087-29.747,58.87l-71.317,52.549C279.438,418.2,267.875,422,256,422s-23.438-3.8-32.999-10.844l-71.317-52.549   c-18.705-13.783-29.747-35.635-29.747-58.87V173.359c0-15.951,10.341-30.062,25.552-34.865l72.796-22.988   C231.84,111.857,243.884,110,256,110s24.16,1.857,35.714,5.505l72.796,22.988c15.211,4.803,25.552,18.914,25.552,34.865V299.737z"/></g>
                                 </svg>
-                                <h3>Soporte 24/7</h3>
-                                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit vulputate, scelerisque praesent conubia mus bibendum felis class justo, penatibus egestas auctor nam vehicula suspendisse pulvinar.</p>
+                                <h3 class="card-title editable" id="tituloDesc">Soporte 24/7</h3>
+                                <p class="card-description editable" id="descripcion">Lorem ipsum dolor sit amet consectetur adipiscing elit vulputate, scelerisque praesent conubia mus bibendum felis class justo, penatibus egestas auctor nam vehicula suspendisse pulvinar.</p>
+                                <button class="editar">editar</button>
+                            </div>
+                            <div id="editForm" style="display:none;">
+                                <h2>Editar Contenido</h2>
+                                <label class="tituloInput">Título:</label>
+                                <input type="text" id="tituloInput" required>
+                                <br>
+                                <label class="descripcionInput">Descripción:</label>
+                                <textarea id="descripcionInput" required></textarea>
+                                <br>
+                                <button id="saveButton">Guardar</button>
+                                <button id="cancelButton">Cancelar</button>
                             </div>
                         </div>
                     </div>
@@ -70,5 +117,6 @@
         </div>
     </div>
     <br><br>
+    <script src="nosotros.js"></script>
 </body>
 </html>
