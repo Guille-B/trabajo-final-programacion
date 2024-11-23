@@ -1,10 +1,4 @@
 
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-}
 
 
 .footer {
@@ -17,7 +11,7 @@ body {
 
 
 .footer .imagenf {
-    max-width: 8%;
+    max-width:50%;
     height: auto;
 }
 
@@ -82,12 +76,14 @@ button:hover {
 }
 
 .social-media a {
+    font-size: large;
     margin: 0 10px;
-    color: white;
+    color: rgb(83, 181, 247);
     text-decoration: none;
 }
 
 .social-media a:hover {
+    font-size: larger;
     text-decoration: underline;
 }
 
