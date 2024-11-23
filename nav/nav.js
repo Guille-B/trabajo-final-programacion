@@ -10,7 +10,7 @@ function mostrarContenido(ruta) {
         })
         .then(data => {
             document.getElementById('home').innerHTML = data;
-
+            console.log(ruta)
             // Crear un nuevo script y añadirlo al DOM
             const script = document.createElement('script');
             script.src = './nosotros/nosotros.js'; // Cambia a la ruta de tu archivo JS
@@ -23,6 +23,7 @@ function mostrarContenido(ruta) {
             console.error('Error:', error);
         });
 }
+
 const btnLogin = document.getElementById("login")
 
 btnLogin.addEventListener("click", mostrarForm)
