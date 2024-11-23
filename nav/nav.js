@@ -26,6 +26,7 @@ function mostrarContenido(ruta) {
                 };
                 document.body.appendChild(script); // Añade el script al final del body
             }
+            
         })
         .catch(error => {
             console.error('Error:', error);
