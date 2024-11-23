@@ -23,19 +23,6 @@ function mostrarContenido(ruta) {
             console.error('Error:', error);
         });
 }
-<<<<<<< HEAD
-
-const btnLogin = document.getElementById("login")
-
-btnLogin.addEventListener("click", mostrarForm)
-
-function mostrarForm() {
-    const oculto = document.querySelector('.inicio');
-    oculto.classList.remove("oculto")
-}
-
-=======
->>>>>>> 435e41198e5a87d2335f781ec4997806cb6270d2
 
 
 
