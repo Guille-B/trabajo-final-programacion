@@ -29,6 +29,7 @@ function loadHTMLWithScript(htmlPath, scriptPath, elementId) {
 // Cargar navbar con su script
 loadHTMLWithScript('./nav/nav.html', './nav/nav.js' , 'navbar');
 
+
 // Cargar footer con su script
 loadHTMLWithScript('./footer/footer.html', './footer/footer.js', 'footer');
 

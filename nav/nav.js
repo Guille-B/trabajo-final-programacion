@@ -1,32 +1,33 @@
-
 // Función para cargar contenido en el div home
 function mostrarContenido(ruta) {
     fetch(ruta)
         .then(res => {
             if (!res.ok) {
-                throw new Error('la respuesta no fue exitosa');
+                throw new Error('La respuesta no fue exitosa');
             }
             return res.text();
         })
         .then(data => {
             document.getElementById('home').innerHTML = data;
 
-            // Crear un nuevo script y añadirlo al DOM
-            const script = document.createElement('script');
-            script.src = './nosotros/nosotros.js'; // Cambia a la ruta de tu archivo JS
-            script.onload = () => {
-                console.log('Script cargado y ejecutado');
-            };
-            document.body.appendChild(script); // Añade el script al final del body
+            // Crear un nuevo script y añadirlo al DOM según la ruta
+            let scriptSrc;
+            if (ruta.includes('catalogo')) {
+                scriptSrc = './catalogo/catalogo.js';
+            } else if (ruta.includes('nosotros')) {
+                scriptSrc = './nosotros/nosotros.js';
+            }
+
+            if (scriptSrc) {
+                const script = document.createElement('script');
+                script.src = scriptSrc;
+                script.onload = () => {
+                    console.log('Script cargado y ejecutado');
+                };
+                document.body.appendChild(script); // Añade el script al final del body
+            }
         })
         .catch(error => {
             console.error('Error:', error);
         });
 }
-
-
-
-
-
-
-
