@@ -48,3 +48,18 @@
     font-size:5cm;
 }
 
+.editForm {
+  padding: 20px;
+  background: #f9f9f9;
+  border-top: 1px solid #ddd;
+}
+
+.editForm input,
+.editForm .descripcionInput{
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
