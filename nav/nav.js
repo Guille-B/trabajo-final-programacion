@@ -17,9 +17,13 @@ function mostrarContenido(ruta) {
             } else if (ruta.includes('nosotros')) {
                 scriptSrc = './nosotros/nosotros.js';
             }
+            else if (ruta.includes('login')){
+                scriptSrc = './login/login.js';
+            }
 
             if (scriptSrc) {
                 const script = document.createElement('script');
+                script.type= 'module';
                 script.src = scriptSrc;
                 script.onload = () => {
                     console.log('Script cargado y ejecutado');

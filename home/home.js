@@ -94,3 +94,4 @@ function anterior() {
     mostrarImagen();
 }
 
+

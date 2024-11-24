@@ -1,5 +1,18 @@
 
+function mostrarTodosLosBotones() {
+    const datosInicio = localStorage.getItem("usuario", nombre_usuario);
+    // Selecciona todos los botones en la página
+    const todosLosBotones = document.querySelectorAll("button");
+    if(datosInicio!=""){
+        todosLosBotones.forEach(boton => {
+            boton.classList.remove("oculto");
+        });
+    }
+}
+
+
 function loadHTMLWithScript(htmlPath, scriptPath, elementId) {
+
     fetch(htmlPath)
         .then(response => {
             if (!response.ok) {
@@ -36,3 +49,4 @@ loadHTMLWithScript('./footer/footer.html', './footer/footer.js', 'footer');
 // Cargar home con su script
 loadHTMLWithScript('./home/home.html', './home/home.js', 'home');
 
+mostrarTodosLosBotones();
