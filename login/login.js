@@ -29,7 +29,4 @@ import { datos } from "./datos.js";
         // Limpiar campos
         document.getElementById("nombre_usuario").value = "";
         document.getElementById("contra").value = "";
-        console.log("Usuario ingresado:", nombre_usuario);
-        console.log("Contraseña ingresada:", contra);
-        console.log("Usuarios disponibles:", datos.usuarios);
     }

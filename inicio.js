@@ -1,15 +1,4 @@
 
-function mostrarTodosLosBotones() {
-    const datosInicio = localStorage.getItem("usuario", nombre_usuario);
-    // Selecciona todos los botones en la página
-    const todosLosBotones = document.querySelectorAll("button");
-    if(datosInicio!=""){
-        todosLosBotones.forEach(boton => {
-            boton.classList.remove("oculto");
-        });
-    }
-}
-
 
 function loadHTMLWithScript(htmlPath, scriptPath, elementId) {
 
@@ -49,4 +38,16 @@ loadHTMLWithScript('./footer/footer.html', './footer/footer.js', 'footer');
 // Cargar home con su script
 loadHTMLWithScript('./home/home.html', './home/home.js', 'home');
 
-mostrarTodosLosBotones();
+function verificarSesion() {
+    const usuario = localStorage.getItem("usuario");
+    if (usuario) {
+        // Si el usuario está logueado, mostrar los botones de editar
+        const botonesEditar = document.querySelectorAll('.editar');
+        botonesEditar.forEach(boton => {
+            boton.classList.remove('oculto'); // Eliminar la clase 'oculto' para mostrar el botón
+        });
+    } 
+}
+
+// Llamar a la función al cargar la página
+verificarSesion();
