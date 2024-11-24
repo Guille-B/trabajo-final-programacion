@@ -61,10 +61,9 @@ function init() {
 
 }
 
-// Llamar a la función init para inicializar el comportamiento
 init();
 
-// funcion para mover las imagenes del carrousel
+
 let index = 0;
 
 function mostrarImagen() {
@@ -78,17 +77,16 @@ function siguiente() {
     const totalImagenes = document.querySelectorAll('.imagen').length;
     index++;
     if (index >= totalImagenes) {
-        index = 0; // Regresar a la primera imagen
+        index = 0; 
     }
     mostrarImagen();
 }
-
 
 function anterior() {
     const totalImagenes = document.querySelectorAll('.imagen').length;
     index--;
     if (index < 0) {
-        index = totalImagenes - 1; // Ir a la última imagen
+        index = totalImagenes - 1; 
     }
 
     mostrarImagen();
@@ -97,14 +95,13 @@ function anterior() {
 function verificarSesion() {
     const usuario = localStorage.getItem("usuario");
     if (usuario) {
-        // Si el usuario está logueado, mostrar los botones de editar
+ 
         const botonesEditar = document.querySelectorAll('.editar');
         
         botonesEditar.forEach(boton => {
-            boton.classList.remove('oculto'); // Eliminar la clase 'oculto' para mostrar el botón
+            boton.classList.remove('oculto'); 
         });
     } 
 }
 
-// Llamar a la función al cargar la página
 verificarSesion();

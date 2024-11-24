@@ -1,4 +1,4 @@
-// Función para cargar contenido en el div home
+
 function mostrarContenido(ruta) {
     fetch(ruta)
         .then(res => {
@@ -10,7 +10,6 @@ function mostrarContenido(ruta) {
         .then(data => {
             document.getElementById('home').innerHTML = data;
 
-            // Crear un nuevo script y añadirlo al DOM según la ruta
             let scriptSrc;
             if (ruta.includes('catalogo')) {
                 scriptSrc = './catalogo/catalogo.js';
@@ -28,7 +27,7 @@ function mostrarContenido(ruta) {
                 script.onload = () => {
                     console.log('Script cargado y ejecutado');
                 };
-                document.body.appendChild(script); // Añade el script al final del body
+                document.body.appendChild(script); 
             }
             
         })

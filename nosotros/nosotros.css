@@ -3,11 +3,11 @@
     object-fit: cover;
 }
 .jumbotron-custom {
-    background-image: url('../imagenes/nosotros/motitonos.jpg'); /* Ruta de la imagen */
-    background-size: cover; /* Para cubrir todo el jumbotron */
-    background-position: center; /* Centra la imagen */
-    color: white; /* Cambia el color del texto para que sea legible */
-    padding: 4rem 2rem; /* Ajusta el padding según sea necesario */
+    background-image: url('../imagenes/nosotros/motitonos.jpg'); 
+    background-size: cover; 
+    background-position: center; 
+    color: white; 
+    padding: 4rem 2rem; 
     min-height: 500px; 
     max-width: 100%;  
 

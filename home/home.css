@@ -131,11 +131,11 @@
 }
 
 .fondo .card {
-  transition: transform 0.3s ease; /* Suaviza la transformación */
+  transition: transform 0.3s ease; 
 }
 
 .fondo .card:hover {
-  transform: scale(1.05); /* Aumenta el tamaño al 105% */
+  transform: scale(1.05); 
 }
 
 

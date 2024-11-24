@@ -31,7 +31,7 @@ input {
 
 .formulario{ 
     margin-left: 25%;
-    background-color: white; /* Fondo blanco para el formulario */
-    padding: 20px; /* Espaciado interno */
-    width: 600px; /* Ancho fijo para el formulario */
+    background-color: white; 
+    padding: 20px; 
+    width: 600px; 
 }

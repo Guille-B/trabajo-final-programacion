@@ -1,6 +1,4 @@
 
-
-
 .footer {
     background-color: #333;
     color: white;
@@ -11,10 +9,10 @@
 
 
 .imagenf {
-    width: 120px; /* Ajusta el ancho deseado */
-    height: 100px; /* Mantiene la proporción de la imagen */
-    max-height: 100px; /* Altura máxima para uniformidad */
-    object-fit: cover; /* Asegura que la imagen se recorte adecuadamente */
+    width: 120px; 
+    height: 100px; 
+    max-height: 100px; 
+    object-fit: cover; 
 }
 
 
