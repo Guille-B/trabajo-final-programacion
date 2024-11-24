@@ -21,12 +21,14 @@
             <li><a href="index.html">Inicio</a></li>
             <li><a href="#" onclick="mostrarContenido('../catalogo/catalogo.html')">Catalogo</a></li>
             <li><a href="#" onclick="mostrarContenido('../nosotros/sobreNosostros.html')">Sobre nosotros</a></li>
-            <li><a href="#" onclick="mostrarContenido('../login/login.html')"><button id="btnL">login</button></a></li>
+            <li>
+                <a href="#" onclick="mostrarContenido('../login/login.html')"><button id="btnL">login</button></a>
+                <button class="cerrarSesion oculto" id="cerrar" onclick="cerrarSesion()">Cerrar sesion</button>
+            </li>
+            
             
 
         </ul>
-
-        
     </nav>
     <script  src="nav.js"></script>
 

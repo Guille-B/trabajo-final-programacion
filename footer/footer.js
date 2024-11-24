@@ -26,7 +26,8 @@ function saveFooter() {
     localStorage.setItem('footerCopy', copy);
 
     alert('Cambios guardados exitosamente.');
-
+    const btnGuardar = document.getElementById('save-footer');
+    btnGuardar.classList.add("oculto")
     
     setEditable(false);
 }
@@ -41,8 +42,25 @@ document.addEventListener('DOMContentLoaded', loadFooter);
 
 
 document.getElementById('edit-footer').addEventListener('click', function() {
+    const btnGuardar = document.getElementById('save-footer');
+    btnGuardar.classList.remove("oculto")
+
     setEditable(true);
 });
 
 
 document.getElementById('save-footer').addEventListener('click', saveFooter);
+function verificarSesion() {
+    const usuario = localStorage.getItem("usuario");
+    if (usuario) {
+        // Si el usuario está logueado, mostrar los botones de editar
+        const botonesEditar = document.querySelectorAll('.editar');
+        
+        botonesEditar.forEach(boton => {
+            boton.classList.remove('oculto'); // Eliminar la clase 'oculto' para mostrar el botón
+        });
+    } 
+}
+
+// Llamar a la función al cargar la página
+verificarSesion();

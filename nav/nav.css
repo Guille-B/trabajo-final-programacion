@@ -24,7 +24,7 @@ nav ul li a {
 }
 
 .paginas {
-    margin-left: 40%;
+    margin-left: 36%;
 }
 nav ul li a:hover {
     font-size: large;
@@ -46,6 +46,11 @@ nav ul li a:hover {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-
-
 }
+.cerrarSesion{
+    background-color: #ff0000;
+  }
+  .cerrarSesion:hover{
+    background-color: #fa6767;
+  
+  }

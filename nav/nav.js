@@ -36,3 +36,28 @@ function mostrarContenido(ruta) {
             console.error('Error:', error);
         });
 }
+
+function mostrarBoton(){
+    let boton = document.getElementById('cerrar');
+    let btnLogin = document.getElementById('btnL');
+    const datos =localStorage.getItem('usuario');
+    if(datos){
+        boton.classList.remove("oculto")
+        btnLogin.classList.add('oculto');
+    }
+}
+mostrarBoton();
+
+const cerrar= document.getElementById("cerrar");
+cerrar.addEventListener("click", cerrarSesion);
+
+function cerrarSesion(){
+    let btnCerrarSesion = document.getElementById('cerrar');
+    let btnLogin = document.getElementById('btnL');
+
+    localStorage.removeItem('usuario');
+    
+    btnCerrarSesion.classList.add("oculto");
+    btnLogin.classList.remove('oculto');
+    location.reload();
+}

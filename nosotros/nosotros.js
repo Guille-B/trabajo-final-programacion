@@ -34,3 +34,17 @@ document.querySelectorAll('.saveButton').forEach(button => {
         editForm.style.display = 'none'; // Oculta el formulario de edición después de guardar
     });
 });
+function verificarSesion() {
+    const usuario = localStorage.getItem("usuario");
+    if (usuario) {
+        // Si el usuario está logueado, mostrar los botones de editar
+        const botonesEditar = document.querySelectorAll('.editar');
+        
+        botonesEditar.forEach(boton => {
+            boton.classList.remove('oculto'); // Eliminar la clase 'oculto' para mostrar el botón
+        });
+    } 
+}
+
+// Llamar a la función al cargar la página
+verificarSesion();
